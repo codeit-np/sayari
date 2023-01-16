@@ -6,15 +6,16 @@
         <main>
             <slot></slot>
         </main>
-        <footer></footer>
+        <footer-component/>
     </div>
 </template>
 
 <script>
 import NavbarComponent from "@/components/NavbarComponent.vue"
+import FooterComponent from "@/components/FooterComponent.vue"
     export default {
         name:'TemplateView',
-        components:{NavbarComponent}
+        components:{NavbarComponent,FooterComponent}
     }
 </script>
 

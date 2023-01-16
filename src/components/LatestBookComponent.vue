@@ -1,5 +1,5 @@
 <template>
-   <vs-card type="5">
+   <vs-card type="1">
     <template #title>
       <h3>Pot with a plant</h3>
     </template>

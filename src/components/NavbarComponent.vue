@@ -1,64 +1,115 @@
 <template>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container">
-    <a class="navbar-brand" href="#">Sayari</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Browse
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Poems</a></li>
-            <li><a class="dropdown-item" href="#">Stories</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Login</a>
-        </li>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" @click.prevent="$router.push({name:'home'})">
+        <img src="@/assets/logo.png" alt="image" width="100"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#" @click.prevent="$router.push({name:'home'})">Home</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              @click.prevent="$router.push({ name: 'about' })"
+              >About</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Browse
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  @click.prevent="$router.push({ name: 'poem' })"
+                  >Poems</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  @click.prevent="$router.push({ name: 'stories' })"
+                  >Stories</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Log in</a>
+          </li>
+        </ul>
 
-        
-      </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              English
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Nepali</a></li>
+            </ul>
+          </li>
+        </ul>
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            English
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">English</a></li>
-            <li><a class="dropdown-item" href="#">Nepali</a></li>
-          </ul>
-        </li>
-        
-      </ul>
-
-      
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-danger" type="submit">Search</button>
+        </form>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 </template>
 
 <script>
-    export default {
-        name:'NavbarComponent'
-    }
+export default {
+  name: "NavbarComponent",
+};
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.navbar {
+  font-family: "Bitter";
+}
+a {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+.bg-primary {
+  background-color: var(--primary) !important;
+}
 </style>

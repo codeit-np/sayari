@@ -7,16 +7,19 @@
           <div>
             <h1>Welcome to <span class="text-danger">Sayari</span></h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Deserunt, quibusdam. Aspernatur, quo iure. Illum quae rem est eos
-              eveniet officia, alias eaque quo quia quasi molestias labore,
-              suscipit inventore porro.
+              Sayari is an online literary community where readers and writers
+              of original poetry and stories can interact.
             </p>
-            <button class="btn btn-danger">Start Reading</button>
+            <button class="btn btn-outline-danger">Start Reading</button>
             <button class="btn btn-outline-danger ms-2">Start Writing</button>
           </div>
           <div>
-            <img src="@/assets/hero-img.gif" alt="" />
+            <img
+              src="@/assets/hero-img.jpg"
+              alt=""
+              height="470px"
+              width="620px"
+            />
           </div>
         </div>
       </div>
@@ -75,8 +78,28 @@
 import TemplateView from "./TemplateView.vue";
 import LatestBookComponent from "@/components/LatestBookComponent.vue";
 export default {
-  components: { TemplateView, LatestBookComponent },
+  components: { TemplateView, LatestBookComponent,},
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style  scoped>
+.container{
+  font-family: 'Bitter';
+}
+h1{
+  color: black;
+  font-weight: bold;
+}
+p{
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+}
+.btn{
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  margin-top: 50px;
+  font-weight: 500;
+}
+</style>
