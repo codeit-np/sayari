@@ -58,7 +58,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link">Log in</a>
+            <a class="nav-link" @click.prevent="$router.push({name:'login'})">Log in</a>
           </li>
         </ul>
 

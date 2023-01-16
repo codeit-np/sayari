@@ -83,9 +83,7 @@ export default {
 </script>
 
 <style  scoped>
-.container{
-  font-family: 'Bitter';
-}
+
 h1{
   color: black;
   font-weight: bold;
