@@ -1,42 +1,8 @@
 <template>
-  <template-view>
-    <section class="py-2 g-2">
-    <div class="container">
-    <div class="row g-2">
-      <div class="h2">Poems for you</div>
-          <div class="col-md-3" v-for="(i, index) in 4" :key="index">
-    <vs-card type="3">
-    <template #title>
-      <h3>It ends with us</h3>
-    </template>
-    <template #img>
-      <img src="@/assets/ended.jpg" alt="">
-    </template>
-    <template #text>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-      </p>
-    </template>
-    <template #interactions>
-      <vs-button danger icon>
-        <i class='bx bx-heart'></i>
-      </vs-button>
-      <vs-button class="btn-chat" shadow primary>
-        <i class='bx bx-chat' ></i>
-        <span class="span">
-          54
-        </span>
-      </vs-button>
-    </template>
-  </vs-card>
-          </div>
-    </div> 
-    </div>
-    </section>  
-
-    <section class="py-5">
+  <dashboard-menu>
+       <section class="py-5">
       <div class="container g-2">
-        <h2>Trending now
+        <h2 class="text-dark"> Your purchased stories
           </h2>
         <div class="row">
           <div class="col-md-3" v-for="(post,index) in posts.posts" :key="index">
@@ -55,15 +21,14 @@
         </div>
       </div>
     </section>
-  </template-view>
+  </dashboard-menu>
 </template>
 
 <script>
-
-import TemplateView from './TemplateView.vue'
+import DashboardMenu from "@/components/DashboardMenu.vue"
 import axios from 'axios'
   export default {
-  components: { TemplateView },
+    components:{DashboardMenu},
    data(){
     return{
       posts:[]

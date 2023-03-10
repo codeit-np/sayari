@@ -58,8 +58,40 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "stories" */ '../views/DashboardView.vue')
+    component: () => import(/* webpackChunkName: "stories" */ '../views/dashboard/DashboardView.vue')
   },
+  {
+    path: '/writepoem',
+    name: 'writepoem',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "stories" */ '../views/WritePoem.vue')
+  },
+  {
+    path: '/writestory',
+    name: 'writestory',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "stories" */ '../views/WriteStory.vue')
+  },
+  {
+    path: '/purchasedpoems',
+    name: 'purchasedpoems',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "stories" */ '../views/dashboard/PurchasedPoems.vue')
+  },
+  {
+    path: '/purchasedstories',
+    name: 'purchasedstories',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "stories" */ '../views/dashboard/PurchasedStories.vue')
+  }
 ]
 
 const router = new VueRouter({
